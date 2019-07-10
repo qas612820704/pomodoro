@@ -1,0 +1,115 @@
+@import '../../globals';
+
+.secondary-background {
+  background: $secondary-color;
+}
+
+.text-menu {
+  font-size: 36px;
+  font-weight: bold;
+  color: rgba(#ffffff, .2);
+  &__item {
+    margin-bottom: 42px;
+    &--active {
+      color: $primary-color;
+      i {
+        color: $primary-color !important;
+      }
+    }
+    i {
+      font-size: 36px !important;
+      color: rgba(#ffffff, .2);
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+  }
+}
+
+.bottom {
+  position: absolute;
+  bottom: 0;
+}
+
+.half-clock {
+  $half-clock-radius: 175px;
+  position: relative;
+
+  height: $half-clock-radius;
+  width: $half-clock-radius * 2;
+  background: $background-color;
+  border-top-left-radius: $half-clock-radius * 2;
+  border-top-right-radius: $half-clock-radius * 2;
+  text-align: center;
+  &__play-btn {
+    $play-btn-radius: 52px;
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: $half-clock-radius - $play-btn-radius;
+    margin-top: -$play-btn-radius;
+    width: $play-btn-radius * 2;
+    height: $play-btn-radius * 2;
+
+    border-radius: 50%;
+    box-shadow: 0px 0px 0px 6px $secondary-color;
+
+    background: $primary-color;
+    &__content {
+      $play-btn-inner-radius: 44px;
+
+      display: flex;
+      margin: auto;
+
+      width: $play-btn-inner-radius * 2;
+      height: $play-btn-inner-radius * 2;
+
+      border-radius: 50%;
+      box-shadow: 0px 0px 0px 6px $secondary-color;
+
+      i {
+        margin: auto;
+        color: white;
+        font-size: 64px !important;
+      }
+    }
+  }
+
+  &__title {
+    padding-top: 57px;
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: bold;
+    color: $primary-color;
+  }
+  &__content {
+    font-size: 16px;
+    font-weight: bold;
+    color: $secondary-color;
+  }
+}
+
+.todos-block {
+  margin-top: 48px;
+  &__details {
+    color: #ffffff;
+
+    summary {
+      display: flex;
+      justify-content: space-between;
+      background: rgba(#ffffff, 0.2);
+      padding: 8px 16px;
+      font-size: 24px;
+      font-weight: bold;
+    }
+
+    summary::-webkit-details-marker {
+      order: 2;
+      align-self: center;
+      font-size: x-small;
+    }
+  }
+
+  &__contents {
+    margin-top: 16px;
+  }
+}

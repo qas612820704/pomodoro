@@ -11,6 +11,7 @@ $left-background-width: calc(50vw - (1280 * 0.15)px);
 }
 
 .container {
+  position: relative;
   display: flex;
   margin: auto;
   width: 1280px;
@@ -21,37 +22,6 @@ $left-background-width: calc(50vw - (1280 * 0.15)px);
 
 .dashboard-left {
   width: 445px;
-}
-
-.add-mission-field {
-  position: relative;
-  display: inline-block;
-  font-size: 19px;
-  width: 100%;
-  color: $primary-color;
-  &--input {
-    width: 100%;
-    height: 56px;
-    padding: 19px 16px;
-    background: white;
-    border: 0;
-    font-size: inherit;
-    font-weight: bold;
-    font-style: italic;
-    color: inherit;
-    &::placeholder {
-      color: lighten($primary-color, 20%);
-    }
-    &:focus {
-      outline-color: $primary-color;
-    }
-  }
-  &--icon {
-    color: inherit;
-    position: absolute;
-    padding: 19px 16px;
-    right: 0;
-  }
 }
 
 .working-block {
@@ -87,44 +57,16 @@ $left-background-width: calc(50vw - (1280 * 0.15)px);
   line-height: 176px;
 }
 
-.todo-list {
-  width: 445px;
+.todo-block {
   margin-top: 107px;
-}
 
-.todo-item {
-  color: $secondary-color;
-  font-weight: bold;
-  font-size: 19px;
-  height: 32px;
-  margin: 9px 0;
-  border-bottom: solid rgba($secondary-color, 0.2) 1px;
-  &--circle {
-    vertical-align: middle;
-    display: inline-block;
-    width: 19px;
-    height: 19px;
-  }
-  &--text {
-    vertical-align: middle;
-    padding-left: 4px;
-  }
-
-  &--play-icon {
+  &__more-btn {
     float: right;
-    vertical-align: middle;
-    color: inherit;
-    font-size: 24px;
-    line-height: 32px;
+    padding: 0;
+    min-width: initial;
+
+    color: $primary-color;
   }
-}
-
-.todo-block--more-btn {
-  float: right;
-  padding: 0;
-  min-width: initial;
-
-  color: $primary-color;
 }
 
 .circle {
@@ -162,10 +104,3 @@ $left-background-width: calc(50vw - (1280 * 0.15)px);
   padding-right: 85px;
 }
 
-.right-menu {
-  > * {
-    color: white;
-    font-size: 36px !important;
-    margin-bottom: 48px;
-  }
-}

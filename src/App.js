@@ -1,9 +1,15 @@
 import React from 'react';
-import Dashboard from './components/Dashboard';
+import { Router, Redirect } from '@reach/router';
+import Dashboard from './pages/Dashboard';
+import Todos from './pages/Todos';
 
 function App() {
   return (
-    <Dashboard />
+    <Router>
+      <Redirect from="/" to="dashboard" noThrow />
+      <Dashboard path="dashboard" />
+      <Todos path="todos" />
+    </Router>
   );
 }
 

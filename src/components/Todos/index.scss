@@ -1,0 +1,42 @@
+@import '../../globals';
+
+.todo-list {
+  $self: &;
+
+  color: $secondary-color;
+  &--text-white {
+    color: white;
+
+    #{ $self }__item {
+      &__circle {
+        border-color: white;
+      }
+    }
+  }
+
+  &__item {
+    font-weight: bold;
+    font-size: 19px;
+    height: 32px;
+    margin: 9px 0;
+    border-bottom: solid rgba($secondary-color, 0.2) 1px;
+    &__circle {
+      vertical-align: middle;
+      display: inline-block;
+      width: 19px;
+      height: 19px;
+    }
+    &__text {
+      vertical-align: middle;
+      padding-left: 4px;
+    }
+
+    &__play-icon {
+      float: right;
+      vertical-align: middle;
+      color: inherit;
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
+}

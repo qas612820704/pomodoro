@@ -1,0 +1,32 @@
+@import '../../globals';
+
+.add-mission-text-field {
+  position: relative;
+  display: inline-block;
+  font-size: 19px;
+  width: 100%;
+  color: $primary-color;
+  &__input {
+    width: 100%;
+    height: 56px;
+    padding: 19px 16px;
+    background: white;
+    border: 0;
+    font-size: inherit;
+    font-weight: bold;
+    font-style: italic;
+    color: inherit;
+    &::placeholder {
+      color: lighten($primary-color, 20%);
+    }
+    &:focus {
+      outline-color: $primary-color;
+    }
+  }
+  &__icon {
+    color: inherit;
+    position: absolute;
+    padding: 19px 16px;
+    right: 0;
+  }
+}
